@@ -2,15 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Target, Clock, Star, CheckCircle, ArrowRight, Zap, Search, BookOpen } from "lucide-react";
-
 const LogosTraining = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center space-x-4">
-            <a href="/" className="text-2xl font-bold text-primary">BibelDiscovery</a>
+            <a href="/" className="text-2xl font-bold text-primary">Logos-Workshops
+          </a>
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
@@ -82,17 +81,10 @@ const LogosTraining = () => {
                   </p>
                 </div>
                 <div className="space-y-2">
-                  {[
-                    "Navigation & Benutzeroberfläche",
-                    "Grundlegende Suchen",
-                    "Wichtigste Ressourcen kennenlernen",
-                    "Erste praktische Übungen"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center space-x-2">
+                  {["Navigation & Benutzeroberfläche", "Grundlegende Suchen", "Wichtigste Ressourcen kennenlernen", "Erste praktische Übungen"].map((item, index) => <div key={index} className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
                       <span className="text-sm">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </CardContent>
             </Card>
@@ -117,17 +109,10 @@ const LogosTraining = () => {
                   </p>
                 </div>
                 <div className="space-y-2">
-                  {[
-                    "Erweiterte Suchfunktionen",
-                    "Ressourcen intelligent verknüpfen",
-                    "Notizen & Highlights effektiv nutzen",
-                    "Workflows optimieren"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center space-x-2">
+                  {["Erweiterte Suchfunktionen", "Ressourcen intelligent verknüpfen", "Notizen & Highlights effektiv nutzen", "Workflows optimieren"].map((item, index) => <div key={index} className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
                       <span className="text-sm">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </CardContent>
             </Card>
@@ -152,17 +137,10 @@ const LogosTraining = () => {
                   </p>
                 </div>
                 <div className="space-y-2">
-                  {[
-                    "Versteckte Features entdecken",
-                    "Automatisierung & Shortcuts",
-                    "Profi-Workflows",
-                    "Insider-Tricks & Hacks"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center space-x-2">
+                  {["Versteckte Features entdecken", "Automatisierung & Shortcuts", "Profi-Workflows", "Insider-Tricks & Hacks"].map((item, index) => <div key={index} className="flex items-center space-x-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
                       <span className="text-sm">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </CardContent>
             </Card>
@@ -286,8 +264,6 @@ const LogosTraining = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default LogosTraining;
