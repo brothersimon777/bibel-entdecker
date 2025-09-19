@@ -13,124 +13,102 @@ const Index = () => {
             <h2 className="text-2xl font-bold text-primary">BibelDiscovery</h2>
           </div>
           <div className="flex items-center space-x-4">
-            <Button variant="ghost">Über mich</Button>
-            <Button variant="ghost">Workshops</Button>
-            <Button variant="ghost">Testimonials</Button>
-            <Button variant="gradient">Beratungsgespräch</Button>
+            <Button variant="ghost" asChild>
+              <a href="/logos-training">Logos-Training</a>
+            </Button>
+            <Button variant="ghost" asChild>
+              <a href="/bibel-workshops">Bibel-Workshops</a>
+            </Button>
+            <Button variant="ghost" asChild>
+              <a href="/gemeinden-leiter">Für Gemeinden</a>
+            </Button>
+            <Button variant="ghost" asChild>
+              <a href="/ueber-mich">Über mich</a>
+            </Button>
+            <Button variant="gradient" asChild>
+              <a href="/kontakt">Beratungsgespräch</a>
+            </Button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section - Inspired by Kajabi */}
+      {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-10"></div>
         <div className="container relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center py-20">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-5xl font-bold tracking-tight text-foreground">
-                  Logos lieben lernen, statt nur{" "}
-                  <span className="bg-gradient-hero bg-clip-text text-transparent">
-                    Logos haben
-                  </span>
-                </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  Verwandle deine Bibelarbeit in ein lebendiges Abenteuer der Entdeckung
-                </p>
-                <p className="text-lg text-muted-foreground">
-                  Individuell buchbare Workshops für Gemeinden, Pastoren und Bibelschulen – 
-                  mit 6 Jahren Logos-Erfahrung und hunderten begeisterten Teilnehmern.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="gradient" size="lg" className="text-lg px-8 py-6">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Kostenloses Beratungsgespräch buchen
-                </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                  Workshop-Beispiele ansehen
-                </Button>
-              </div>
-
-              <div className="flex items-center space-x-6 pt-4">
-                <div className="flex items-center space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Über 500 begeisterte Teilnehmer
-                </p>
-              </div>
+          <div className="text-center py-20 space-y-12">
+            <div className="space-y-6 max-w-4xl mx-auto">
+              <h1 className="text-5xl font-bold tracking-tight text-foreground">
+                Als Leiter investierst du in Menschen. Ich helfe dir, besser in dein{" "}
+                <span className="bg-gradient-hero bg-clip-text text-transparent">
+                  wichtigstes Werkzeug
+                </span>{" "}
+                zu investieren: das Wort Gottes.
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Entdecke maßgeschneiderte Workshops, die dein Team befähigen, deine Gemeinde begeistern und dein persönliches Studium revolutionieren.
+              </p>
             </div>
 
-            {/* Course Preview Card */}
-            <div className="relative">
-              <Card className="bg-gradient-card shadow-card border-0 overflow-hidden">
-                <div className="bg-gradient-hero h-2"></div>
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between">
-                    <Badge variant="secondary" className="bg-primary/10 text-primary">WORKSHOP</Badge>
-                    <Badge variant="outline">LIVE</Badge>
+            {/* Two Pillars */}
+            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <Card className="bg-gradient-card shadow-card border-0 overflow-hidden p-8 text-left">
+                <div className="space-y-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Target className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">Jona – Ein unbarmherziger Prophet</CardTitle>
-                  <CardDescription>
-                    Entdecke die überraschende Wahrheit hinter Jonas Widerstand
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center space-x-3 text-sm text-muted-foreground">
-                    <Users className="h-4 w-4" />
-                    <span>15 Teilnehmer</span>
-                    <Clock className="h-4 w-4" />
-                    <span>4 Stunden</span>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4">Logos-Training: Die Software meistern</h3>
+                    <p className="text-muted-foreground mb-6">
+                      Du besitzt Logos, fühlst dich aber von den Möglichkeiten erschlagen? Ich zeige dir, wie du vom reinen "Besitzer" zum souveränen "Nutzer" wirst. Lerne die Funktionen kennen, die dir wirklich Zeit sparen und neue Erkenntnisse bringen.
+                    </p>
+                    <Button variant="gradient" className="w-full" asChild>
+                      <a href="/logos-training">Zum Logos-Training</a>
+                    </Button>
                   </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Historischer Kontext</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Griechische Wortstudien</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Praktische Anwendung</span>
-                    </div>
+                </div>
+              </Card>
+
+              <Card className="bg-gradient-card shadow-card border-0 overflow-hidden p-8 text-left">
+                <div className="space-y-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Star className="h-6 w-6 text-primary" />
                   </div>
-                </CardContent>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4">Bibel-Workshops: Die Schrift entdecken</h3>
+                    <p className="text-muted-foreground mb-6">
+                      Du sehnst dich nach frischen Aha-Momenten in der Bibel? In diesen Workshops steht der biblische Text im Mittelpunkt. Wir entdecken gemeinsam Gottes Wort – Logos ist dabei unser optionaler, aber genialer Assistent. Auch mit Stift und Papier bist du hier goldrichtig.
+                    </p>
+                    <Button variant="gradient" className="w-full" asChild>
+                      <a href="/bibel-workshops">Zu den Bibel-Workshops</a>
+                    </Button>
+                  </div>
+                </div>
               </Card>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Section */}
+      {/* Target Audience Section */}
       <section className="py-20 bg-muted/50">
         <div className="container">
           <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl font-bold">Du kennst das Problem:</h2>
+            <h2 className="text-4xl font-bold">Für wen sind diese Workshops?</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              "Logos liegt ungenutzt auf dem Computer",
-              "Die Predigt-Vorbereitung dauert ewig",
-              "Immer die gleichen oberflächlichen Erkenntnisse",
-              "Die Gemeinde hört passiv zu, statt selbst zu entdecken",
-              "Bibelstudium fühlt sich trocken und theoretisch an",
-              "Du liest die Bibel, aber sie berührt dich nicht mehr",
-              "Bekannte Geschichten langweilen, statt zu inspirieren",
-              "Du suchst nach Tiefe, findest aber nur Oberfläche"
-            ].map((problem, index) => (
-              <Card key={index} className="border-destructive/20 bg-destructive/5">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <X className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-foreground">{problem}</p>
-                  </div>
+              { icon: Users, title: "Pastoren & Prediger", desc: "Für eine tiefgründigere und effizientere Vorbereitung." },
+              { icon: Target, title: "Gemeindeleiter & Ehrenamtliche", desc: "Um Teams auszurüsten und Kleingruppen zu stärken." },
+              { icon: Star, title: "Theologiestudierende", desc: "Für den entscheidenden Vorteil im Studium und bei Hausarbeiten." },
+              { icon: CheckCircle, title: "Jeden Bibelleser", desc: "Für alle, die einfach tiefer graben und mehr entdecken wollen." }
+            ].map((item, index) => (
+              <Card key={index} className="bg-gradient-card shadow-card text-center p-6">
+                <CardContent className="space-y-4">
+                  <item.icon className="h-12 w-12 text-primary mx-auto" />
+                  <h3 className="font-bold text-lg">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -138,87 +116,41 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Solution Section */}
+      {/* About Section */}
       <section className="py-20">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
-                  DIE LÖSUNG
-                </Badge>
-                <h2 className="text-4xl font-bold">
-                  Workshops, die wirklich{" "}
-                  <span className="bg-gradient-hero bg-clip-text text-transparent">
-                    funktionieren
-                  </span>
-                </h2>
-                <p className="text-xl text-muted-foreground">
-                  Nicht noch ein Funktions-Tutorial – sondern echte Bibelentdeckung!
-                </p>
+          <div className="text-center space-y-8 max-w-4xl mx-auto">
+            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
+              DEIN GUIDE
+            </Badge>
+            <h2 className="text-4xl font-bold">
+              Dein Guide mit{" "}
+              <span className="bg-gradient-hero bg-clip-text text-transparent">
+                6 Jahren Insider-Erfahrung
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Als ehemaliger offizieller Logos-Trainer kenne ich nicht nur die Software, sondern auch die Hürden der Nutzer. Meine Leidenschaft ist es, die Brücke zwischen Technik und transformativem Bibelstudium zu bauen.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 pt-8">
+              <div className="text-center">
+                <p className="text-3xl font-bold text-primary">6</p>
+                <p className="text-sm text-muted-foreground">Jahre als offizieller Trainer</p>
               </div>
-
-              <div className="space-y-4">
-                <p className="text-lg text-muted-foreground">
-                  Mit 6 Jahren Erfahrung als offizieller Logos-Trainer und hunderten Webinaren 
-                  weiß ich: Es geht nicht um Software-Features, sondern darum, die Bibel neu zu entdecken.
-                </p>
-                
-                <p className="text-lg text-muted-foreground">
-                  Hier passiert echte Transformation: Menschen, die jahrelang dieselben Bibelstellen 
-                  gelesen haben, entdecken plötzlich lebensverändernde Wahrheiten.
-                </p>
+              <div className="text-center">
+                <p className="text-3xl font-bold text-primary">500+</p>
+                <p className="text-sm text-muted-foreground">Webinare & Tutorials</p>
               </div>
-
-              <div className="grid gap-4">
-                {[
-                  { icon: Target, text: "Sofort anwendbar: Du nimmst konkrete Erkenntnisse mit nach Hause" },
-                  { icon: Users, text: "Zum Mitmachen: Aktive Entdeckung statt passives Zuhören" },
-                  { icon: Star, text: "Individuell angepasst: Dein Level, deine Zielgruppe, deine Zeit" },
-                  { icon: CheckCircle, text: "Bibelzentriert: Die Software ist nur Werkzeug – Gottes Wort steht im Mittelpunkt" }
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <feature.icon className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-foreground">{feature.text}</p>
-                  </div>
-                ))}
+              <div className="text-center">
+                <p className="text-3xl font-bold text-primary">1000+</p>
+                <p className="text-sm text-muted-foreground">Begeisterte Teilnehmer</p>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <Card className="bg-gradient-card shadow-card">
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Badge variant="secondary">6 JAHRE</Badge>
-                    <span>Offizieller Logos-Trainer</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 gap-4 text-center">
-                    <div>
-                      <p className="text-3xl font-bold text-primary">500+</p>
-                      <p className="text-sm text-muted-foreground">Webinare</p>
-                    </div>
-                    <div>
-                      <p className="text-3xl font-bold text-primary">1000+</p>
-                      <p className="text-sm text-muted-foreground">Teilnehmer</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gradient-card shadow-card">
-                <CardHeader>
-                  <CardTitle>Das Versprechen</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-lg font-semibold text-center">
-                    In jedem Workshop wirst du mindestens eine Bibelstelle völlig neu verstehen – 
-                    <span className="text-primary"> garantiert!</span>
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            <Button variant="outline" size="lg" asChild>
+              <a href="/ueber-mich">Mehr über mich erfahren</a>
+            </Button>
           </div>
         </div>
       </section>
@@ -229,55 +161,12 @@ const Index = () => {
           <div className="text-center space-y-8 text-white">
             <h2 className="text-4xl font-bold">Bereit für den nächsten Schritt?</h2>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Lass uns gemeinsam entdecken, wie dein Workshop aussehen könnte.
+              Lass uns unverbindlich darüber sprechen, wie ein Workshop für dich oder deine Gemeinde aussehen könnte. Ich freue mich darauf, dich kennenzulernen.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <Card className="bg-white/10 border-white/20 backdrop-blur">
-                <CardHeader className="text-center">
-                  <Mail className="h-12 w-12 mx-auto mb-4 text-white" />
-                  <CardTitle className="text-white">Workshop anfragen</CardTitle>
-                  <CardDescription className="text-white/80">
-                    Beschreibe kurz deine Situation
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full bg-white text-primary hover:bg-white/90">
-                    Formular ausfüllen
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/10 border-white/20 backdrop-blur">
-                <CardHeader className="text-center">
-                  <Mail className="h-12 w-12 mx-auto mb-4 text-white" />
-                  <CardTitle className="text-white">Direkte E-Mail</CardTitle>
-                  <CardDescription className="text-white/80">
-                    Schreib mir deine Fragen
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full bg-white text-primary hover:bg-white/90">
-                    E-Mail senden
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/10 border-white/20 backdrop-blur">
-                <CardHeader className="text-center">
-                  <Video className="h-12 w-12 mx-auto mb-4 text-white" />
-                  <CardTitle className="text-white">Video-Call (15 Min)</CardTitle>
-                  <CardDescription className="text-white/80">
-                    Persönliches Gespräch buchen
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full bg-white text-primary hover:bg-white/90">
-                    Termin buchen
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6" asChild>
+              <a href="/kontakt">Jetzt kostenloses Erstgespräch anfragen</a>
+            </Button>
           </div>
         </div>
       </section>
