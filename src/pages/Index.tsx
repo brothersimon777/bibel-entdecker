@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Users, Clock, Target, Star, Heart, Gift, ArrowRight, BookOpen, Search, Zap } from "lucide-react";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
@@ -34,9 +32,10 @@ const Index = () => {
                 Logos Workshops fürs echte Leben
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              In diesen Workshops ist Logos unser Assistent, nicht der Star. Der Star ist Gottes Wort. Hier geht es um die Freude am Entdecken, um Aha- und Wow-Momente, die dein Herz berühren und deinen Glauben stärken. Perfekt für Gemeindefreizeiten, Themenwochenenden oder Kleingruppentage.
-            </p>
+            <p className="text-xl text-muted-foreground leading-relaxed">Für viele ist Logos ein geniales Tool, um die Bibel (neu) zu verstehen. Logos kann so viel, dass es sich immer lohnt, neue Funktionen und neue Tricks zu finden, um noch tiefer in die Bibel einzutauchen.
+
+
+Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste aus Logos herauszuholen und beim Entdecken der Bibel den nächsten Schritt zu gehen.</p>
           </div>
         </div>
       </section>
@@ -182,24 +181,19 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                {[
-                  {
-                    icon: Target,
-                    title: "Individuelle Planung",
-                    description: "Wir schneidern den Workshop genau auf die Bedürfnisse deines Teams zu."
-                  },
-                  {
-                    icon: ArrowRight,
-                    title: "Kombinierbare Inhalte",
-                    description: "Wie wäre es mit einem Logos-Starter-Modul am Vormittag und einem Praxis-Workshop \"Andachtsvorbereitung\" am Nachmittag?"
-                  },
-                  {
-                    icon: Gift,
-                    title: "Exklusive Vorteile",
-                    description: "Nach Absprache organisiere ich kostenlose Testversionen und Rabatte für deine Teilnehmer."
-                  }
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-4">
+                {[{
+                icon: Target,
+                title: "Individuelle Planung",
+                description: "Wir schneidern den Workshop genau auf die Bedürfnisse deines Teams zu."
+              }, {
+                icon: ArrowRight,
+                title: "Kombinierbare Inhalte",
+                description: "Wie wäre es mit einem Logos-Starter-Modul am Vormittag und einem Praxis-Workshop \"Andachtsvorbereitung\" am Nachmittag?"
+              }, {
+                icon: Gift,
+                title: "Exklusive Vorteile",
+                description: "Nach Absprache organisiere ich kostenlose Testversionen und Rabatte für deine Teilnehmer."
+              }].map((feature, index) => <div key={index} className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <feature.icon className="h-6 w-6 text-primary" />
                     </div>
@@ -207,8 +201,7 @@ const Index = () => {
                       <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                       <p className="text-muted-foreground">{feature.description}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -249,17 +242,10 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {[
-                      "Deine Mitarbeiter sind sofort einsatzbereit",
-                      "Neue Begeisterung für das Bibelstudium",
-                      "Konkrete Werkzeuge für den Gemeindedienst",
-                      "Langfristige Befähigung und Wachstum"
-                    ].map((benefit, index) => (
-                      <div key={index} className="flex items-center space-x-2">
+                    {["Deine Mitarbeiter sind sofort einsatzbereit", "Neue Begeisterung für das Bibelstudium", "Konkrete Werkzeuge für den Gemeindedienst", "Langfristige Befähigung und Wachstum"].map((benefit, index) => <div key={index} className="flex items-center space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-500" />
                         <span className="text-sm">{benefit}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </CardContent>
               </Card>
@@ -277,45 +263,37 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                emoji: "🐋",
-                title: "Jona – Ein unbarmherziger Prophet",
-                subtitle: "eines barmherzigen Gottes",
-                description: "Warum wollte Jona nicht nach Ninive? Die überraschende Antwort verändert alles. Du wirst Gottes Barmherzigkeit mit völlig neuen Augen sehen."
-              },
-              {
-                emoji: "🌱",
-                title: "Wie alles begann",
-                subtitle: "Entdeckungen in Genesis 1",
-                description: "Sieben Tage, die die Welt bedeuten – und was du bisher übersehen hast. Entdecke Gottes Schöpfungsplan für dein Leben."
-              },
-              {
-                emoji: "💪",
-                title: "Ermahnen & Ermutigung",
-                subtitle: "Die parakalew-Wortstudie",
-                description: "Ein griechisches Wort, das dein Gemeindeleben revolutioniert. Lerne die Kunst der biblischen Seelsorge neu."
-              },
-              {
-                emoji: "⭐",
-                title: "Barnabas",
-                subtitle: "Ein unbekannter Held",
-                description: "Der Mann, der Paulus möglich machte – und was wir von ihm lernen können. Entdecke die Kraft der Ermutigung."
-              },
-              {
-                emoji: "🌊",
-                title: "Der Gott, der den Sturm verschläft",
-                subtitle: "(Markus 4,35-41)",
-                description: "Eine Geschichte, die alles über Vertrauen lehrt. Finde Ruhe in deinen Lebensstürmen."
-              },
-              {
-                emoji: "🐑",
-                title: "Warum die Menschen den guten Hirten töten wollten",
-                subtitle: "Johannes 10",
-                description: "Verstörend aktuell und lebensverändernd. Verstehe Jesu radikale Botschaft neu."
-              }
-            ].map((workshop, index) => (
-              <Card key={index} className="bg-gradient-card shadow-card">
+            {[{
+            emoji: "🐋",
+            title: "Jona – Ein unbarmherziger Prophet",
+            subtitle: "eines barmherzigen Gottes",
+            description: "Warum wollte Jona nicht nach Ninive? Die überraschende Antwort verändert alles. Du wirst Gottes Barmherzigkeit mit völlig neuen Augen sehen."
+          }, {
+            emoji: "🌱",
+            title: "Wie alles begann",
+            subtitle: "Entdeckungen in Genesis 1",
+            description: "Sieben Tage, die die Welt bedeuten – und was du bisher übersehen hast. Entdecke Gottes Schöpfungsplan für dein Leben."
+          }, {
+            emoji: "💪",
+            title: "Ermahnen & Ermutigung",
+            subtitle: "Die parakalew-Wortstudie",
+            description: "Ein griechisches Wort, das dein Gemeindeleben revolutioniert. Lerne die Kunst der biblischen Seelsorge neu."
+          }, {
+            emoji: "⭐",
+            title: "Barnabas",
+            subtitle: "Ein unbekannter Held",
+            description: "Der Mann, der Paulus möglich machte – und was wir von ihm lernen können. Entdecke die Kraft der Ermutigung."
+          }, {
+            emoji: "🌊",
+            title: "Der Gott, der den Sturm verschläft",
+            subtitle: "(Markus 4,35-41)",
+            description: "Eine Geschichte, die alles über Vertrauen lehrt. Finde Ruhe in deinen Lebensstürmen."
+          }, {
+            emoji: "🐑",
+            title: "Warum die Menschen den guten Hirten töten wollten",
+            subtitle: "Johannes 10",
+            description: "Verstörend aktuell und lebensverändernd. Verstehe Jesu radikale Botschaft neu."
+          }].map((workshop, index) => <Card key={index} className="bg-gradient-card shadow-card">
                 <CardHeader>
                   <div className="text-4xl mb-4">{workshop.emoji}</div>
                   <CardTitle className="text-xl">{workshop.title}</CardTitle>
@@ -326,8 +304,7 @@ const Index = () => {
                 <CardContent>
                   <p className="text-sm text-muted-foreground">{workshop.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           <div className="text-center mt-12">
@@ -380,8 +357,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
