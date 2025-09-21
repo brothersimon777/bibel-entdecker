@@ -10,23 +10,20 @@ const UeberMich = () => {
       <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center space-x-4">
-            <a href="/" className="text-2xl font-bold text-primary">BibelDiscovery</a>
+            <a href="/" className="text-2xl font-bold text-primary">Logos Workshops</a>
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
-              <a href="/logos-training">Logos-Training</a>
+              <a href="/">Home</a>
             </Button>
             <Button variant="ghost" asChild>
-              <a href="/bibel-workshops">Bibel-Workshops</a>
+              <a href="/kontakt">Kontakt</a>
             </Button>
-            <Button variant="ghost" asChild>
-              <a href="/gemeinden-leiter">Für Gemeinden</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/ueber-mich">Über mich</a>
-            </Button>
-            <Button variant="gradient" asChild>
-              <a href="/kontakt">Beratungsgespräch</a>
+            <Button 
+              variant="gradient"
+              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
+            >
+              Beratungsgespräch
             </Button>
           </div>
         </div>
@@ -57,7 +54,7 @@ const UeberMich = () => {
       <section className="py-20 bg-muted/50">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+          <div className="space-y-8">
               <div className="space-y-4">
                 <h2 className="text-4xl font-bold">Meine Geschichte</h2>
                 <p className="text-lg text-muted-foreground">
@@ -67,7 +64,7 @@ const UeberMich = () => {
 
               <div className="space-y-4">
                 <p className="text-muted-foreground">
-                  In den letzten 6 Jahren habe ich hunderte von Webinaren geleitet und tausende Menschen dabei begleitet, die Bibel neu zu entdecken. Dabei ist mir eines immer wieder aufgefallen:
+                  In den letzten 6 Jahren habe ich über 60 Stunden Training geleitet und tausende Menschen dabei begleitet, die Bibel neu zu entdecken. Dabei ist mir eines immer wieder aufgefallen:
                 </p>
                 
                 <p className="text-muted-foreground">
@@ -81,6 +78,14 @@ const UeberMich = () => {
             </div>
 
             <div className="space-y-6">
+              <div className="flex justify-center">
+                <img 
+                  src="/src/assets/simon-profile.jpeg" 
+                  alt="Simon - Logos Workshop Trainer" 
+                  className="w-80 h-80 object-cover rounded-2xl shadow-xl"
+                />
+              </div>
+              
               <Card className="bg-gradient-card shadow-card">
                 <CardHeader>
                   <CardTitle className="text-2xl">Meine Kernbotschaft</CardTitle>
@@ -98,8 +103,8 @@ const UeberMich = () => {
                   <p className="text-sm text-muted-foreground">Jahre als Trainer</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-primary">500+</p>
-                  <p className="text-sm text-muted-foreground">Webinare</p>
+                  <p className="text-3xl font-bold text-primary">60+</p>
+                  <p className="text-sm text-muted-foreground">Stunden Training</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-primary">1000+</p>
@@ -296,8 +301,12 @@ const UeberMich = () => {
               Lass uns gemeinsam herausfinden, wie ich dir helfen kann, die Bibel neu zu entdecken.
             </p>
             
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6" asChild>
-              <a href="/kontakt">Jetzt kostenloses Erstgespräch anfragen</a>
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
+              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
+            >
+              Jetzt kostenloses Erstgespräch anfragen
             </Button>
           </div>
         </div>
@@ -307,7 +316,7 @@ const UeberMich = () => {
       <footer className="py-12 bg-background border-t">
         <div className="container">
           <div className="text-center space-y-4">
-            <h3 className="text-2xl font-bold text-primary">BibelDiscovery</h3>
+            <h3 className="text-2xl font-bold text-primary">Logos Workshops</h3>
             <p className="text-muted-foreground">
               Eins ist sicher: Nach dem Workshop wirst du die Bibel mit anderen Augen lesen. Und das ist erst der Anfang!
             </p>

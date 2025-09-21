@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Users, Clock, Target, Star, Heart, Gift, ArrowRight, BookOpen, Search, Zap } from "lucide-react";
+import { ContactFormDialog } from "@/components/ContactFormDialog";
+import { CheckCircle, Users, Clock, Target, Star, Heart, Gift, ArrowRight, BookOpen, Search, Zap, Mail, Calendar } from "lucide-react";
 const Index = () => {
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -25,23 +26,57 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-10"></div>
         <div className="container relative py-20">
-          <div className="text-center space-y-8 max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold tracking-tight text-foreground">
-              Die Bibel neu entdecken -{" "}
-              <span className="bg-gradient-hero bg-clip-text text-transparent">
-                Logos Workshops fürs echte Leben
-              </span>
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">Für viele ist Logos ein geniales Tool, um die Bibel (neu) zu verstehen. Logos kann so viel, dass es sich immer lohnt, neue Funktionen und neue Tricks zu finden, um noch tiefer in die Bibel einzutauchen.
-
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left space-y-8">
+              <h1 className="text-5xl font-bold tracking-tight text-foreground">
+                Die Bibel neu entdecken -{" "}
+                <span className="bg-gradient-hero bg-clip-text text-transparent">
+                  Logos Workshops fürs echte Leben
+                </span>
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">Für viele ist Logos ein geniales Tool, um die Bibel (neu) zu verstehen. Logos kann so viel, dass es sich immer lohnt, neue Funktionen und neue Tricks zu finden, um noch tiefer in die Bibel einzutauchen.
 
 Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste aus Logos herauszuholen und beim Entdecken der Bibel den nächsten Schritt zu gehen.</p>
+              <div className="flex flex-col gap-4 sm:flex-row lg:justify-start sm:justify-center">
+                <Button 
+                  size="lg" 
+                  className="font-semibold"
+                  onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
+                >
+                  Kostenloses Erstgespräch
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <a href="#workshops">Mehr erfahren</a>
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="/src/assets/logos-faktenbuch.png" 
+                  alt="Logos Faktenbuch Interface" 
+                  className="rounded-lg shadow-lg opacity-80 hover:opacity-100 transition-opacity"
+                />
+                <img 
+                  src="/src/assets/logos-wortstudie.png" 
+                  alt="Logos Wortstudie Interface" 
+                  className="rounded-lg shadow-lg mt-8 opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 opacity-60">
+                <img 
+                  src="/src/assets/logos-studienhilfe.png" 
+                  alt="Logos Studienhilfe Interface" 
+                  className="rounded-lg shadow-lg w-24 h-24 object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Focus Workshops Section */}
-      <section className="py-20 bg-muted/50">
+      <section id="workshops" className="py-20 bg-muted/50">
         <div className="container">
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl font-bold">Anwendungsorientierte Fokus-Workshops</h2>
