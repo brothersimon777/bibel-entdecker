@@ -21,9 +21,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/logos-training" element={<LogosTraining />} />
-          <Route path="/bibel-workshops" element={<BibelWorkshops />} />
-          <Route path="/gemeinden-leiter" element={<GemeindenLeiter />} />
+        <Route path="/logos-training" element={<LogosTraining />} />
+        <Route path="/gemeinden-leiter" element={<GemeindenLeiter />} />
           <Route path="/ueber-mich" element={<UeberMich />} />
           <Route path="/kontakt" element={<Kontakt />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
