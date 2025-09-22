@@ -18,8 +18,8 @@ export function ContactFormDialog() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
-    organization: "",
+    workshopSize: "",
+    location: "",
     message: ""
   });
   const { toast } = useToast();
@@ -32,10 +32,10 @@ export function ContactFormDialog() {
     const body = encodeURIComponent(`
 Name: ${formData.name}
 E-Mail: ${formData.email}
-Telefon: ${formData.phone}
-Organisation: ${formData.organization}
+Workshopgröße: ${formData.workshopSize}
+Ort: ${formData.location}
 
-Nachricht:
+Fragen:
 ${formData.message}
     `);
     
@@ -51,8 +51,8 @@ ${formData.message}
     setFormData({
       name: "",
       email: "",
-      phone: "",
-      organization: "",
+      workshopSize: "",
+      location: "",
       message: ""
     });
   };
@@ -67,8 +67,8 @@ ${formData.message}
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="w-full">
-          Anfrage senden
+        <Button variant="gradient" className="w-full text-lg py-6">
+          Workshop anfragen
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
@@ -99,24 +99,23 @@ ${formData.message}
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="phone">Telefon</Label>
+            <Label htmlFor="workshopSize">Workshopgröße</Label>
             <Input
-              id="phone"
-              type="tel"
-              value={formData.phone}
+              id="workshopSize"
+              value={formData.workshopSize}
               onChange={handleChange}
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="organization">Gemeinde/Organisation</Label>
+            <Label htmlFor="location">Ort</Label>
             <Input
-              id="organization"
-              value={formData.organization}
+              id="location"
+              value={formData.location}
               onChange={handleChange}
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">Ihre Nachricht *</Label>
+            <Label htmlFor="message">Fragen *</Label>
             <Textarea
               id="message"
               value={formData.message}

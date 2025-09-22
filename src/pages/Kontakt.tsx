@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ContactFormDialog } from "@/components/ContactFormDialog";
 import { Mail, Calendar, MessageSquare, CheckCircle, Clock, Users, Target } from "lucide-react";
 
 const Kontakt = () => {
@@ -10,23 +11,23 @@ const Kontakt = () => {
       <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center space-x-4">
-            <a href="/" className="text-2xl font-bold text-primary">BibelDiscovery</a>
+            <a href="/" className="text-2xl font-bold text-primary">Logos Workshops</a>
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
-              <a href="/logos-training">Logos-Training</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/bibel-workshops">Bibel-Workshops</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/gemeinden-leiter">Für Gemeinden</a>
+              <a href="/">Homepage</a>
             </Button>
             <Button variant="ghost" asChild>
               <a href="/ueber-mich">Über mich</a>
             </Button>
-            <Button variant="gradient" asChild>
-              <a href="/kontakt">Beratungsgespräch</a>
+            <Button variant="ghost" asChild>
+              <a href="/kontakt">Kontakt</a>
+            </Button>
+            <Button 
+              variant="gradient"
+              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
+            >
+              Beratungsgespräch
             </Button>
           </div>
         </div>
@@ -71,9 +72,7 @@ const Kontakt = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="gradient" className="w-full text-lg py-6">
-                  Workshop anfragen
-                </Button>
+                <ContactFormDialog />
               </CardContent>
             </Card>
 
@@ -87,7 +86,11 @@ const Kontakt = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="gradient" className="w-full text-lg py-6">
+                <Button 
+                  variant="gradient" 
+                  className="w-full text-lg py-6"
+                  onClick={() => window.location.href = 'mailto:logos@klickwinkel.net'}
+                >
                   E-Mail senden
                 </Button>
               </CardContent>
@@ -103,7 +106,11 @@ const Kontakt = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="gradient" className="w-full text-lg py-6">
+                <Button 
+                  variant="gradient" 
+                  className="w-full text-lg py-6"
+                  onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
+                >
                   Termin buchen
                 </Button>
               </CardContent>
@@ -226,10 +233,13 @@ const Kontakt = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6">
-                Workshop anfragen
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-6">
+              <ContactFormDialog />
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
+                onClick={() => window.location.href = 'mailto:logos@klickwinkel.net'}
+              >
                 E-Mail schreiben
               </Button>
             </div>
@@ -241,7 +251,7 @@ const Kontakt = () => {
       <footer className="py-12 bg-background border-t">
         <div className="container">
           <div className="text-center space-y-4">
-            <h3 className="text-2xl font-bold text-primary">BibelDiscovery</h3>
+            <h3 className="text-2xl font-bold text-primary">Logos Workshops</h3>
             <p className="text-muted-foreground">
               Ich freue mich darauf, dich kennenzulernen und gemeinsam zu entdecken, wie dein Workshop aussehen könnte.
             </p>

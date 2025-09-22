@@ -10,7 +10,7 @@ const BibelWorkshops = () => {
       <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center space-x-4">
-            <a href="/" className="text-2xl font-bold text-primary">BibelDiscovery</a>
+            <a href="/" className="text-2xl font-bold text-primary">Logos Workshops</a>
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
@@ -274,7 +274,7 @@ const BibelWorkshops = () => {
       <footer className="py-12 bg-background border-t">
         <div className="container">
           <div className="text-center space-y-4">
-            <h3 className="text-2xl font-bold text-primary">BibelDiscovery</h3>
+            <h3 className="text-2xl font-bold text-primary">Logos Workshops</h3>
             <p className="text-muted-foreground">
               Mit Logos entdecken, mit Begeisterung teilen!
             </p>

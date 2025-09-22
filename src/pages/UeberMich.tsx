@@ -14,7 +14,10 @@ const UeberMich = () => {
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
-              <a href="/">Home</a>
+              <a href="/">Homepage</a>
+            </Button>
+            <Button variant="ghost" asChild>
+              <a href="/ueber-mich">Über mich</a>
             </Button>
             <Button variant="ghost" asChild>
               <a href="/kontakt">Kontakt</a>

@@ -13,10 +13,19 @@ const Index = () => {
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
+              <a href="/">Homepage</a>
+            </Button>
+            <Button variant="ghost" asChild>
               <a href="/ueber-mich">Über mich</a>
             </Button>
-            <Button variant="gradient" asChild>
-              <a href="/kontakt">Beratungsgespräch</a>
+            <Button variant="ghost" asChild>
+              <a href="/kontakt">Kontakt</a>
+            </Button>
+            <Button 
+              variant="gradient"
+              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
+            >
+              Beratungsgespräch
             </Button>
           </div>
         </div>
@@ -38,13 +47,7 @@ const Index = () => {
 
 Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste aus Logos herauszuholen und beim Entdecken der Bibel den nächsten Schritt zu gehen.</p>
               <div className="flex flex-col gap-4 sm:flex-row lg:justify-start sm:justify-center">
-                <Button 
-                  size="lg" 
-                  className="font-semibold"
-                  onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
-                >
-                  Kostenloses Erstgespräch
-                </Button>
+                <ContactFormDialog />
                 <Button size="lg" variant="outline" asChild>
                   <a href="#workshops">Mehr erfahren</a>
                 </Button>
@@ -360,6 +363,48 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
         </div>
       </section>
 
+      {/* Flexible Formats Section */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="text-4xl font-bold">Flexible Formate für jeden Bedarf</h2>
+            <p className="text-xl text-muted-foreground">Von der schnellen Session bis zum intensiven Wochenende</p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            <Card className="bg-gradient-card shadow-card text-center p-8">
+              <CardContent className="space-y-6">
+                <Clock className="h-16 w-16 text-primary mx-auto" />
+                <h3 className="text-2xl font-bold">Quick-Start Session</h3>
+                <p className="text-muted-foreground">
+                  2-3 Stunden kompakt für den ersten Einstieg oder spezielle Themen
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-card shadow-card text-center p-8">
+              <CardContent className="space-y-6">
+                <Target className="h-16 w-16 text-primary mx-auto" />
+                <h3 className="text-2xl font-bold">Halbtags-Workshop</h3>
+                <p className="text-muted-foreground">
+                  4-6 Stunden für tieferes Eintauchen in ein Fokusthema
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-card shadow-card text-center p-8">
+              <CardContent className="space-y-6">
+                <Heart className="h-16 w-16 text-primary mx-auto" />
+                <h3 className="text-2xl font-bold">Intensiv-Wochenende</h3>
+                <p className="text-muted-foreground">
+                  Mehrtägiger Workshop für umfassende Schulung und Vertiefung
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="container">
@@ -369,8 +414,12 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
               Lass uns gemeinsam einen Workshop entwickeln, der perfekt zu deinen Bedürfnissen passt.
             </p>
             
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6" asChild>
-              <a href="/kontakt">Jetzt kostenloses Erstgespräch anfragen</a>
+            <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
+              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
+            >
+              Jetzt kostenloses Erstgespräch anfragen
             </Button>
           </div>
         </div>

@@ -252,7 +252,7 @@ const LogosTraining = () => {
       <footer className="py-12 bg-background border-t">
         <div className="container">
           <div className="text-center space-y-4">
-            <h3 className="text-2xl font-bold text-primary">BibelDiscovery</h3>
+            <h3 className="text-2xl font-bold text-primary">Logos Workshops</h3>
             <p className="text-muted-foreground">
               Technik dient dem Inhalt, nicht umgekehrt.
             </p>
