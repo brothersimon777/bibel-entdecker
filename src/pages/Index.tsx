@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ContactFormDialog } from "@/components/ContactFormDialog";
+
 import { CheckCircle, Users, Clock, Target, Star, Heart, Gift, ArrowRight, BookOpen, Search, Zap, Mail, Calendar } from "lucide-react";
 const Index = () => {
   return <div className="min-h-screen bg-background">
@@ -18,14 +18,8 @@ const Index = () => {
             <Button variant="ghost" asChild>
               <a href="/ueber-mich">Über mich</a>
             </Button>
-            <Button variant="ghost" asChild>
-              <a href="/kontakt">Kontakt</a>
-            </Button>
-            <Button 
-              variant="gradient"
-              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
-            >
-              Beratungsgespräch
+            <Button variant="gradient" asChild>
+              <a href="/kontakt">Jetzt anfragen</a>
             </Button>
           </div>
         </div>
@@ -47,30 +41,39 @@ const Index = () => {
 
 Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste aus Logos herauszuholen und beim Entdecken der Bibel den nächsten Schritt zu gehen.</p>
               <div className="flex flex-col gap-4 sm:flex-row lg:justify-start sm:justify-center">
-                <ContactFormDialog />
+                <Button size="lg" variant="gradient" asChild>
+                  <a href="/kontakt">Jetzt anfragen</a>
+                </Button>
                 <Button size="lg" variant="outline" asChild>
                   <a href="#workshops">Mehr erfahren</a>
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
                 <img 
                   src="/src/assets/logos-faktenbuch.png" 
-                  alt="Logos Faktenbuch Interface" 
-                  className="rounded-lg shadow-lg opacity-80 hover:opacity-100 transition-opacity"
+                  alt="Logos Faktenbuch Screenshot" 
+                  className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity"
+                  loading="lazy"
                 />
                 <img 
                   src="/src/assets/logos-wortstudie.png" 
-                  alt="Logos Wortstudie Interface" 
-                  className="rounded-lg shadow-lg mt-8 opacity-80 hover:opacity-100 transition-opacity"
+                  alt="Logos Wortstudie Screenshot" 
+                  className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity mt-8 md:mt-12"
+                  loading="lazy"
                 />
-              </div>
-              <div className="absolute -bottom-4 -left-4 opacity-60">
                 <img 
                   src="/src/assets/logos-studienhilfe.png" 
-                  alt="Logos Studienhilfe Interface" 
-                  className="rounded-lg shadow-lg w-24 h-24 object-cover"
+                  alt="Logos Studienhilfe Screenshot" 
+                  className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
+                <img 
+                  src="/src/assets/logos-kalender.png" 
+                  alt="Logos Predigtkalender Screenshot" 
+                  className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity mt-8 md:mt-12"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -368,39 +371,115 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
         <div className="container">
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl font-bold">Flexible Formate für jeden Bedarf</h2>
-            <p className="text-xl text-muted-foreground">Von der schnellen Session bis zum intensiven Wochenende</p>
+            <p className="text-xl text-muted-foreground">Von der Schnupper-Session bis zum Wochenend-Intensiv</p>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            <Card className="bg-gradient-card shadow-card text-center p-8">
-              <CardContent className="space-y-6">
-                <Clock className="h-16 w-16 text-primary mx-auto" />
-                <h3 className="text-2xl font-bold">Quick-Start Session</h3>
-                <p className="text-muted-foreground">
-                  2-3 Stunden kompakt für den ersten Einstieg oder spezielle Themen
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Schnupper-Workshop digital",
+                duration: "2-4 Stunden",
+                description: "Perfekt zum Reinschnuppern",
+                format: "Online"
+              },
+              {
+                title: "Workshop Light",
+                duration: "4 Stunden",
+                description: "Kompakt und kraftvoll",
+                format: "Vor Ort"
+              },
+              {
+                title: "Ganztags-Vertiefung",
+                duration: "8 Stunden",
+                description: "Tief eintauchen und durchstarten",
+                format: "Vor Ort"
+              },
+              {
+                title: "Wochenend-Seminar",
+                duration: "6-8 Stunden",
+                description: "Freitag-Abend & Samstag",
+                format: "Intensiv"
+              },
+              {
+                title: "Power-Workshop",
+                duration: "2-3 Tage",
+                description: "Mit Predigt am Sonntag",
+                format: "Vollausstattung"
+              },
+              {
+                title: "Maßgeschneidert",
+                duration: "Nach Absprache",
+                description: "Ganz nach euren Bedürfnissen",
+                format: "Individuell"
+              }
+            ].map((format, index) => (
+              <Card key={index} className="bg-gradient-card shadow-card">
+                <CardHeader>
+                  <Badge variant="outline" className="w-fit">{format.format}</Badge>
+                  <CardTitle className="text-xl">{format.title}</CardTitle>
+                  <CardDescription className="text-primary font-semibold">
+                    {format.duration}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{format.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <Card className="bg-gradient-card shadow-card text-center p-8">
-              <CardContent className="space-y-6">
-                <Target className="h-16 w-16 text-primary mx-auto" />
-                <h3 className="text-2xl font-bold">Halbtags-Workshop</h3>
+      {/* Kosten Section */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="text-4xl font-bold">Kosten</h2>
+            <p className="text-xl text-muted-foreground">
+              Ab Ende 2025 biete ich als unabhängiger Logos-Trainer maßgeschneiderte Workshops an. Die entstehenden Kosten sind ein fairer Beitrag, der meine Arbeit unterstützt und euch ein professionelles und auf eure Bedürfnisse zugeschnittenes Erlebnis garantiert.
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <Card className="bg-gradient-card shadow-card">
+              <CardHeader>
+                <CardTitle className="text-2xl">Eure Finanzierung – Eure Wahl</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
                 <p className="text-muted-foreground">
-                  4-6 Stunden für tieferes Eintauchen in ein Fokusthema
+                  Wir möchten den Zugang zu Logos-Wissen so einfach wie möglich machen. Daher liegt die Entscheidung bei euch, ob die Finanzierung über eine feste Gebühr, Spenden oder eine andere Form der Unterstützung erfolgt.
+                </p>
+                <p className="text-muted-foreground">
+                  Ein weiteres Plus: Ich kümmere mich darum, attraktive Rabatte für Logos-Lizenzen und Erweiterungen für eure Teilnehmer zu organisieren!
                 </p>
               </CardContent>
             </Card>
-
-            <Card className="bg-gradient-card shadow-card text-center p-8">
-              <CardContent className="space-y-6">
-                <Heart className="h-16 w-16 text-primary mx-auto" />
-                <h3 className="text-2xl font-bold">Intensiv-Wochenende</h3>
-                <p className="text-muted-foreground">
-                  Mehrtägiger Workshop für umfassende Schulung und Vertiefung
+            <Card className="bg-gradient-card shadow-card">
+              <CardHeader>
+                <CardTitle className="text-2xl">Eure detaillierte Kostenübersicht</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex items-center space-x-2">
+                  <ArrowRight className="h-4 w-4 text-primary" />
+                  <span>Anfahrtskosten: 0,5€/km</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <ArrowRight className="h-4 w-4 text-primary" />
+                  <span>Eventuelle Übernachtung: Ab 89€ (bei längeren Anfahrten oder mehrtägigen Veranstaltungen)</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <ArrowRight className="h-4 w-4 text-primary" />
+                  <span>Workshop-Pauschale: richtet sich nach Modulen und Dauer</span>
+                </div>
+                <p className="text-sm text-muted-foreground pt-2">
+                  Fordert jetzt ein kostenloses Erstgespräch an, um ein passendes Angebot zu erhalten!
                 </p>
               </CardContent>
             </Card>
+          </div>
+          <div className="text-center mt-12">
+            <Button variant="gradient" size="lg" asChild>
+              <a href="/kontakt">Jetzt anfragen</a>
+            </Button>
           </div>
         </div>
       </section>
@@ -417,9 +496,9 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
             <Button 
               size="lg" 
               className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
-              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
+              asChild
             >
-              Jetzt kostenloses Erstgespräch anfragen
+              <a href="/kontakt">Jetzt anfragen</a>
             </Button>
           </div>
         </div>

@@ -19,14 +19,8 @@ const UeberMich = () => {
             <Button variant="ghost" asChild>
               <a href="/ueber-mich">Über mich</a>
             </Button>
-            <Button variant="ghost" asChild>
-              <a href="/kontakt">Kontakt</a>
-            </Button>
-            <Button 
-              variant="gradient"
-              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
-            >
-              Beratungsgespräch
+            <Button variant="gradient" asChild>
+              <a href="/kontakt">Jetzt anfragen</a>
             </Button>
           </div>
         </div>
@@ -205,73 +199,6 @@ const UeberMich = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl font-bold">Was Teilnehmer sagen</h2>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8">
-            <Card className="bg-gradient-card shadow-card">
-              <CardContent className="p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="italic">
-                    "Endlich verstehe ich, wie Logos wirklich funktioniert – und noch wichtiger: Ich entdecke die Bibel völlig neu! Nach 20 Jahren Pastorendienst dachte ich, ich kenne die Geschichten. Aber dieser Workshop hat mir gezeigt, wie viel ich übersehen habe."
-                  </p>
-                  <div className="pt-4 border-t">
-                    <p className="font-semibold">Pastor M.</p>
-                    <p className="text-sm text-muted-foreground">Bayern</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-card shadow-card">
-              <CardContent className="p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="italic">
-                    "Der Workshop hat unser Bibelstudium revolutioniert. Aus passiven Zuhörern sind aktive Entdecker geworden. Unsere Hauskreise sind jetzt voller Leben und Entdeckerfreude!"
-                  </p>
-                  <div className="pt-4 border-t">
-                    <p className="font-semibold">Gemeindeleitung</p>
-                    <p className="text-sm text-muted-foreground">NRW</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-card shadow-card">
-              <CardContent className="p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="italic">
-                    "Ich hatte Logos zwei Jahre ungenutzt auf dem Computer. Nach dem Workshop nutze ich es täglich – und entdecke jeden Tag neue Schätze in Gottes Wort."
-                  </p>
-                  <div className="pt-4 border-t">
-                    <p className="font-semibold">Theologiestudentin</p>
-                    <p className="text-sm text-muted-foreground">Baden-Württemberg</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Guarantee Section */}
       <section className="py-20 bg-muted/50">
@@ -307,9 +234,9 @@ const UeberMich = () => {
             <Button 
               size="lg" 
               className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
-              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
+              asChild
             >
-              Jetzt kostenloses Erstgespräch anfragen
+              <a href="/kontakt">Jetzt anfragen</a>
             </Button>
           </div>
         </div>

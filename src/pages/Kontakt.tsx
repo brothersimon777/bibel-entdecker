@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ContactFormDialog } from "@/components/ContactFormDialog";
+
 import { Mail, Calendar, MessageSquare, CheckCircle, Clock, Users, Target } from "lucide-react";
 
 const Kontakt = () => {
@@ -20,14 +20,8 @@ const Kontakt = () => {
             <Button variant="ghost" asChild>
               <a href="/ueber-mich">Über mich</a>
             </Button>
-            <Button variant="ghost" asChild>
-              <a href="/kontakt">Kontakt</a>
-            </Button>
-            <Button 
-              variant="gradient"
-              onClick={() => window.open('https://tidycal.com/klickwinkel/video-call', '_blank')}
-            >
-              Beratungsgespräch
+            <Button variant="gradient" asChild>
+              <a href="/kontakt">Jetzt anfragen</a>
             </Button>
           </div>
         </div>
@@ -58,29 +52,15 @@ const Kontakt = () => {
       <section className="py-20 bg-muted/50">
         <div className="container">
           <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl font-bold">3 einfache Wege, um zu starten</h2>
+            <h2 className="text-4xl font-bold">2 einfache Wege, um zu starten</h2>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            <Card className="bg-gradient-card shadow-card border-0 overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 h-2"></div>
-              <CardHeader className="text-center">
-                <MessageSquare className="h-16 w-16 mx-auto mb-4 text-primary" />
-                <CardTitle className="text-2xl">1. Formular ausfüllen</CardTitle>
-                <CardDescription className="text-base">
-                  Beschreibe kurz deine Situation und Wünsche – ich melde mich innerhalb von 24 Stunden bei dir.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <ContactFormDialog />
-              </CardContent>
-            </Card>
-
+          <div className="grid lg:grid-cols-2 gap-8">
             <Card className="bg-gradient-card shadow-card border-0 overflow-hidden">
               <div className="bg-gradient-to-r from-green-500 to-green-600 h-2"></div>
               <CardHeader className="text-center">
                 <Mail className="h-16 w-16 mx-auto mb-4 text-primary" />
-                <CardTitle className="text-2xl">2. Direkte E-Mail</CardTitle>
+                <CardTitle className="text-2xl">Direkte E-Mail</CardTitle>
                 <CardDescription className="text-base">
                   Schreib mir einfach eine Mail mit deinen Fragen und Vorstellungen.
                 </CardDescription>
@@ -95,12 +75,12 @@ const Kontakt = () => {
                 </Button>
               </CardContent>
             </Card>
-
+ 
             <Card className="bg-gradient-card shadow-card border-0 overflow-hidden">
               <div className="bg-gradient-to-r from-purple-500 to-purple-600 h-2"></div>
               <CardHeader className="text-center">
                 <Calendar className="h-16 w-16 mx-auto mb-4 text-primary" />
-                <CardTitle className="text-2xl">3. Direkter Video-Call</CardTitle>
+                <CardTitle className="text-2xl">Direkter Video-Call</CardTitle>
                 <CardDescription className="text-base">
                   Buche dir einen kostenlosen 15-Minuten-Slot für ein persönliches Gespräch.
                 </CardDescription>
@@ -233,14 +213,20 @@ const Kontakt = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ContactFormDialog />
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
-                onClick={() => window.location.href = 'mailto:logos@klickwinkel.net'}
+                asChild
               >
-                E-Mail schreiben
+                <a href="mailto:logos@klickwinkel.net">E-Mail schreiben</a>
+              </Button>
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
+                asChild
+              >
+                <a href="https://tidycal.com/klickwinkel/video-call" target="_blank" rel="noopener noreferrer">Termin buchen</a>
               </Button>
             </div>
           </div>

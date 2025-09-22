@@ -13,19 +13,13 @@ const LogosTraining = () => {
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
-              <a href="/logos-training">Logos-Training</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/bibel-workshops">Bibel-Workshops</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/gemeinden-leiter">Für Gemeinden</a>
+              <a href="/">Homepage</a>
             </Button>
             <Button variant="ghost" asChild>
               <a href="/ueber-mich">Über mich</a>
             </Button>
             <Button variant="gradient" asChild>
-              <a href="/kontakt">Beratungsgespräch</a>
+              <a href="/kontakt">Jetzt anfragen</a>
             </Button>
           </div>
         </div>

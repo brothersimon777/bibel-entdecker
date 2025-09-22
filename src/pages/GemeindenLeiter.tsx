@@ -14,19 +14,13 @@ const GemeindenLeiter = () => {
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
-              <a href="/logos-training">Logos-Training</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/bibel-workshops">Bibel-Workshops</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/gemeinden-leiter">Für Gemeinden</a>
+              <a href="/">Homepage</a>
             </Button>
             <Button variant="ghost" asChild>
               <a href="/ueber-mich">Über mich</a>
             </Button>
             <Button variant="gradient" asChild>
-              <a href="/kontakt">Beratungsgespräch</a>
+              <a href="/kontakt">Jetzt anfragen</a>
             </Button>
           </div>
         </div>
@@ -196,54 +190,6 @@ const GemeindenLeiter = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-muted/50">
-        <div className="container">
-          <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl font-bold">Was Gemeindeleiter sagen</h2>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            <Card className="bg-gradient-card shadow-card">
-              <CardContent className="p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-lg italic">
-                    "Der Workshop hat unser Bibelstudium revolutioniert. Aus passiven Zuhörern sind aktive Entdecker geworden. Unsere Hauskreise sind jetzt voller Leben und Entdeckerfreude!"
-                  </p>
-                  <div className="pt-4 border-t">
-                    <p className="font-semibold">Gemeindeleitung</p>
-                    <p className="text-sm text-muted-foreground">NRW</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-card shadow-card">
-              <CardContent className="p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-lg italic">
-                    "Endlich verstehe ich, wie Logos wirklich funktioniert – und noch wichtiger: Ich entdecke die Bibel völlig neu! Nach 20 Jahren Pastorendienst dachte ich, ich kenne die Geschichten. Aber dieser Workshop hat mir gezeigt, wie viel ich übersehen habe."
-                  </p>
-                  <div className="pt-4 border-t">
-                    <p className="font-semibold">Pastor M.</p>
-                    <p className="text-sm text-muted-foreground">Bayern</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Flexible Formats */}
       <section className="py-20">
