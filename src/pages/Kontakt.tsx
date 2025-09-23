@@ -69,7 +69,7 @@ const Kontakt = () => {
                 <Button 
                   variant="gradient" 
                   className="w-full text-lg py-6"
-                  onClick={() => window.location.href = 'mailto:logos@klickwinkel.net'}
+                  onClick={() => window.location.href = `mailto:logos@klickwinkel.net?subject=${encodeURIComponent("Interesse an Logos-Workshop")}&body=${encodeURIComponent("Lieber Simon,\n\nWir interessieren uns für einen Logos-Workshop\n(Platz für eine persönliche Nachricht)\n\nOrt: \nGemeindename:\nErwartete Teilnehmer-Anzahl:\nWelches Erfahrungslevel bringen die Teilnehmer mit?\nWas ist der Fokus der Zielgruppe: Bibelleser, Pastoraldienst, akademisch?\n\n")}`}
                 >
                   E-Mail senden
                 </Button>
@@ -219,7 +219,7 @@ const Kontakt = () => {
                 className="border-white text-white hover:bg-white/10 text-lg px-8 py-6"
                 asChild
               >
-                <a href="mailto:logos@klickwinkel.net">E-Mail schreiben</a>
+                <a href={`mailto:logos@klickwinkel.net?subject=${encodeURIComponent("Interesse an Logos-Workshop")}&body=${encodeURIComponent("Lieber Simon,\n\nWir interessieren uns für einen Logos-Workshop\n(Platz für eine persönliche Nachricht)\n\nOrt: \nGemeindename:\nErwartete Teilnehmer-Anzahl:\nWelches Erfahrungslevel bringen die Teilnehmer mit?\nWas ist der Fokus der Zielgruppe: Bibelleser, Pastoraldienst, akademisch?\n\n")}`}>E-Mail schreiben</a>
               </Button>
               <Button 
                 size="lg" 

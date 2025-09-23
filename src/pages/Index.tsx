@@ -3,6 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 
 import { CheckCircle, Users, Clock, Target, Star, Heart, Gift, ArrowRight, BookOpen, Search, Zap, Mail, Calendar } from "lucide-react";
+
+// Import images
+import logosFaktenbuch from "@/assets/logos-faktenbuch.png";
+import logosWortstudie from "@/assets/logos-wortstudie.png";
+import logosStudienhilfe from "@/assets/logos-studienhilfe.png";
+import logosKalender from "@/assets/logos-kalender.png";
 const Index = () => {
   return <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -42,7 +48,7 @@ const Index = () => {
 Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste aus Logos herauszuholen und beim Entdecken der Bibel den nächsten Schritt zu gehen.</p>
               <div className="flex flex-col gap-4 sm:flex-row lg:justify-start sm:justify-center">
                 <Button size="lg" variant="gradient" asChild>
-                  <a href="/kontakt">Jetzt anfragen</a>
+                  <a href={`mailto:logos@klickwinkel.net?subject=${encodeURIComponent("Interesse an Logos-Workshop")}&body=${encodeURIComponent("Lieber Simon,\n\nWir interessieren uns für einen Logos-Workshop\n(Platz für eine persönliche Nachricht)\n\nOrt: \nGemeindename:\nErwartete Teilnehmer-Anzahl:\nWelches Erfahrungslevel bringen die Teilnehmer mit?\nWas ist der Fokus der Zielgruppe: Bibelleser, Pastoraldienst, akademisch?\n\n")}`}>Jetzt anfragen</a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <a href="#workshops">Mehr erfahren</a>
@@ -52,25 +58,25 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
             <div className="relative">
               <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
                 <img 
-                  src="/src/assets/logos-faktenbuch.png" 
+                  src={logosFaktenbuch} 
                   alt="Logos Faktenbuch Screenshot" 
                   className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity"
                   loading="lazy"
                 />
                 <img 
-                  src="/src/assets/logos-wortstudie.png" 
+                  src={logosWortstudie} 
                   alt="Logos Wortstudie Screenshot" 
                   className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity mt-8 md:mt-12"
                   loading="lazy"
                 />
                 <img 
-                  src="/src/assets/logos-studienhilfe.png" 
+                  src={logosStudienhilfe} 
                   alt="Logos Studienhilfe Screenshot" 
                   className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity"
                   loading="lazy"
                 />
                 <img 
-                  src="/src/assets/logos-kalender.png" 
+                  src={logosKalender} 
                   alt="Logos Predigtkalender Screenshot" 
                   className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity mt-8 md:mt-12"
                   loading="lazy"
@@ -478,7 +484,7 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
           </div>
           <div className="text-center mt-12">
             <Button variant="gradient" size="lg" asChild>
-              <a href="/kontakt">Jetzt anfragen</a>
+              <a href={`mailto:logos@klickwinkel.net?subject=${encodeURIComponent("Interesse an Logos-Workshop")}&body=${encodeURIComponent("Lieber Simon,\n\nWir interessieren uns für einen Logos-Workshop\n(Platz für eine persönliche Nachricht)\n\nOrt: \nGemeindename:\nErwartete Teilnehmer-Anzahl:\nWelches Erfahrungslevel bringen die Teilnehmer mit?\nWas ist der Fokus der Zielgruppe: Bibelleser, Pastoraldienst, akademisch?\n\n")}`}>Jetzt anfragen</a>
             </Button>
           </div>
         </div>
@@ -498,7 +504,7 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
               className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
               asChild
             >
-              <a href="/kontakt">Jetzt anfragen</a>
+              <a href={`mailto:logos@klickwinkel.net?subject=${encodeURIComponent("Interesse an Logos-Workshop")}&body=${encodeURIComponent("Lieber Simon,\n\nWir interessieren uns für einen Logos-Workshop\n(Platz für eine persönliche Nachricht)\n\nOrt: \nGemeindename:\nErwartete Teilnehmer-Anzahl:\nWelches Erfahrungslevel bringen die Teilnehmer mit?\nWas ist der Fokus der Zielgruppe: Bibelleser, Pastoraldienst, akademisch?\n\n")}`}>Jetzt anfragen</a>
             </Button>
           </div>
         </div>

@@ -236,7 +236,7 @@ const UeberMich = () => {
               className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
               asChild
             >
-              <a href="/kontakt">Jetzt anfragen</a>
+              <a href={`mailto:logos@klickwinkel.net?subject=${encodeURIComponent("Interesse an Logos-Workshop")}&body=${encodeURIComponent("Lieber Simon,\n\nWir interessieren uns für einen Logos-Workshop\n(Platz für eine persönliche Nachricht)\n\nOrt: \nGemeindename:\nErwartete Teilnehmer-Anzahl:\nWelches Erfahrungslevel bringen die Teilnehmer mit?\nWas ist der Fokus der Zielgruppe: Bibelleser, Pastoraldienst, akademisch?\n\n")}`}>Jetzt anfragen</a>
             </Button>
           </div>
         </div>
