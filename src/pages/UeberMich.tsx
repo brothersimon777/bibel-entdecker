@@ -3,6 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, Target, CheckCircle, Heart, BookOpen, Zap } from "lucide-react";
 
+// Import profile image
+import simonProfile from "@/assets/simon-profile.jpeg";
+
 const UeberMich = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -77,7 +80,7 @@ const UeberMich = () => {
             <div className="space-y-6">
               <div className="flex justify-center">
                 <img 
-                  src="/src/assets/simon-profile.jpeg" 
+                  src={simonProfile} 
                   alt="Simon - Logos Workshop Trainer" 
                   className="w-80 h-80 object-cover rounded-2xl shadow-xl"
                 />
