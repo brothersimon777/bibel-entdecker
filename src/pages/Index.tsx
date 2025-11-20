@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
 import { CheckCircle, Users, Clock, Target, Star, Heart, Gift, ArrowRight, BookOpen, Search, Zap, Mail, Calendar } from "lucide-react";
 
 // Import images
@@ -57,30 +56,10 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
             </div>
             <div className="relative">
               <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
-                <img 
-                  src={logosFaktenbuch} 
-                  alt="Logos Faktenbuch Screenshot" 
-                  className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity"
-                  loading="lazy"
-                />
-                <img 
-                  src={logosWortstudie} 
-                  alt="Logos Wortstudie Screenshot" 
-                  className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity mt-8 md:mt-12"
-                  loading="lazy"
-                />
-                <img 
-                  src={logosStudienhilfe} 
-                  alt="Logos Studienhilfe Screenshot" 
-                  className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity"
-                  loading="lazy"
-                />
-                <img 
-                  src={logosKalender} 
-                  alt="Logos Predigtkalender Screenshot" 
-                  className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity mt-8 md:mt-12"
-                  loading="lazy"
-                />
+                <img src={logosFaktenbuch} alt="Logos Faktenbuch Screenshot" className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src={logosWortstudie} alt="Logos Wortstudie Screenshot" className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity mt-8 md:mt-12" loading="lazy" />
+                <img src={logosStudienhilfe} alt="Logos Studienhilfe Screenshot" className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src={logosKalender} alt="Logos Predigtkalender Screenshot" className="rounded-lg shadow-card opacity-80 hover:opacity-100 transition-opacity mt-8 md:mt-12" loading="lazy" />
               </div>
             </div>
           </div>
@@ -381,45 +360,37 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Schnupper-Workshop digital",
-                duration: "2-4 Stunden",
-                description: "Perfekt zum Reinschnuppern",
-                format: "Online"
-              },
-              {
-                title: "Workshop Light",
-                duration: "4 Stunden",
-                description: "Kompakt und kraftvoll",
-                format: "Vor Ort"
-              },
-              {
-                title: "Ganztags-Vertiefung",
-                duration: "8 Stunden",
-                description: "Tief eintauchen und durchstarten",
-                format: "Vor Ort"
-              },
-              {
-                title: "Wochenend-Seminar",
-                duration: "6-8 Stunden",
-                description: "Freitag-Abend & Samstag",
-                format: "Intensiv"
-              },
-              {
-                title: "Power-Workshop",
-                duration: "2-3 Tage",
-                description: "Mit Predigt am Sonntag",
-                format: "Vollausstattung"
-              },
-              {
-                title: "Maßgeschneidert",
-                duration: "Nach Absprache",
-                description: "Ganz nach euren Bedürfnissen",
-                format: "Individuell"
-              }
-            ].map((format, index) => (
-              <Card key={index} className="bg-gradient-card shadow-card">
+            {[{
+            title: "Schnupper-Workshop digital",
+            duration: "2-4 Stunden",
+            description: "Perfekt zum Reinschnuppern",
+            format: "Online"
+          }, {
+            title: "Workshop Light",
+            duration: "4 Stunden",
+            description: "Kompakt und kraftvoll",
+            format: "Vor Ort"
+          }, {
+            title: "Ganztags-Vertiefung",
+            duration: "8 Stunden",
+            description: "Tief eintauchen und durchstarten",
+            format: "Vor Ort"
+          }, {
+            title: "Wochenend-Seminar",
+            duration: "6-8 Stunden",
+            description: "Freitag-Abend & Samstag",
+            format: "Intensiv"
+          }, {
+            title: "Power-Workshop",
+            duration: "2-3 Tage",
+            description: "Mit Predigt am Sonntag",
+            format: "Vollausstattung"
+          }, {
+            title: "Maßgeschneidert",
+            duration: "Nach Absprache",
+            description: "Ganz nach euren Bedürfnissen",
+            format: "Individuell"
+          }].map((format, index) => <Card key={index} className="bg-gradient-card shadow-card">
                 <CardHeader>
                   <Badge variant="outline" className="w-fit">{format.format}</Badge>
                   <CardTitle className="text-xl">{format.title}</CardTitle>
@@ -430,8 +401,7 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
                 <CardContent>
                   <p className="text-muted-foreground">{format.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -466,7 +436,7 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
               <CardContent className="space-y-3">
                 <div className="flex items-center space-x-2">
                   <ArrowRight className="h-4 w-4 text-primary" />
-                  <span>Anfahrtskosten: 0,5€/km</span>
+                  <span>Anfahrtskosten: 0,75€/km</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <ArrowRight className="h-4 w-4 text-primary" />
@@ -499,11 +469,7 @@ Nutzt die Chance für eure Gemeinde, euer Team oder eure Studis, um das Beste au
               Lass uns gemeinsam einen Workshop entwickeln, der perfekt zu deinen Bedürfnissen passt.
             </p>
             
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6"
-              asChild
-            >
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6" asChild>
               <a href={`mailto:logos@klickwinkel.net?subject=${encodeURIComponent("Interesse an Logos-Workshop")}&body=${encodeURIComponent("Lieber Simon,\n\nWir interessieren uns für einen Logos-Workshop\n(Platz für eine persönliche Nachricht)\n\nOrt: \nGemeindename:\nErwartete Teilnehmer-Anzahl:\nWelches Erfahrungslevel bringen die Teilnehmer mit?\nWas ist der Fokus der Zielgruppe: Bibelleser, Pastoraldienst, akademisch?\n\n")}`}>Jetzt anfragen</a>
             </Button>
           </div>
